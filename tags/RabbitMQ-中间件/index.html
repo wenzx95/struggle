@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>Hello World - Hexo</title>
+<title>Tag: RabbitMQ,中间件 - 十块钱</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -57,6 +57,19 @@
             </div>
         </div>
         
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/struggle/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/struggle/categories">Lifestyle</a>
+            
+            <a class="navbar-item "
+               href="/struggle/about">About</a>
+            
+        </div>
+        
         <div class="navbar-menu navbar-end">
             
             
@@ -65,18 +78,26 @@
     </div>
 </nav>
 
-    <section class="section">
+    <section class="section section-heading">
     <div class="container">
-    <article class="article content gallery" itemscope itemprop="blogPost">
+        <div class="content">
+            <h5>#RabbitMQ,中间件</h5>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            Hello World
+            <a href="/struggle/2021/01/15/RabbitMQ/" itemprop="url">RabbitMQ</a>
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
         <span class="column is-narrow">
             
-                <time datetime="2021-01-15T07:53:23.367Z" itemprop="datePublished">Jan 15 2021</time>
+                <time datetime="2021-01-15T08:28:14.000Z" itemprop="datePublished">1月 15 2021</time>
             
         </span>
         
@@ -84,49 +105,48 @@
         <span class="column is-narrow">
             
             
-            a minute read (About 123 words)
+            13 分钟 lesen (Über 2009 Wörter)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <html><head></head><body>* # AMQP架构图
+ * 1、Exchange 交换器
+ * 2、Queue 队列
+ * 3、RabbitMQ流程
+ * 4、消息的可靠性
+ * 5、特殊队列
 
+# AMQP架构图
+graph LR;
+A[Producer] --&gt; B[Exchange1];
+B -- RoutingKey ---&gt; C[Queue1];
+C --&gt; D[Consumer];
+
+1、Exchange 交换器
+​ 生产者发送消息指定交换器的名字，当交换器收到消息的时候，根据消息中的路由键(RoutingKey)和交换器的类型规则以及绑定键（BindingKey），路由到一个或者多个队列中。每个符合的Queu</body></html>
+        <p class="article-more-link">
+            <a href="/struggle/2021/01/15/RabbitMQ/#more">mehr</a>
+        </p>
     
     </div>
     
-    
-    <div class="columns is-mobile is-multiline article-nav">
-        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
-            
-            <a href="/struggle/2021/01/15/RabbitMQ/">RabbitMQ</a>
-            
-        </span>
-        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-next">
-            
-        </span>
-    </div>
     
 </article>
 
 
 
 
+    
+    
     </div>
 </section>
     <footer class="footer">
     <div class="container">
         <div class="columns content">
             <div class="column is-narrow has-text-centered">
-                &copy; 2021 John Doe&nbsp;
+                &copy; 2021 Jude&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
                         target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
             </div>
@@ -162,7 +182,7 @@
     window.FontAwesomeConfig = {
         searchPseudoElements: true
     }
-    moment.locale("en-AU");
+    moment.locale("zh-CN");
 </script>
 
 
